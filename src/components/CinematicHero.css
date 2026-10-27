@@ -1,0 +1,501 @@
+/* ==========================================================================
+   CINEMATIC SCROLL HERO STYLES (Clean & Centered Storytelling)
+   ========================================================================== */
+
+.hero-scene {
+  position: relative;
+  height: 480vh; /* Smooth cinematic scrub distance for storytelling */
+  width: 100%;
+  background: #dedede;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  background: #dedede;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Header - Clean Top Navbar */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(1.2rem, 2.8vw, 2.2rem) clamp(1.25rem, 4.5vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.hero-roof {
+  display: block;
+  overflow: visible;
+}
+
+.hero-brand-text {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 84%;
+  font-weight: 850;
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  letter-spacing: -0.015em;
+  line-height: 1;
+}
+
+.hero-brand-text .brand-dark {
+  color: #1b2628;
+}
+
+.hero-brand-text .brand-green {
+  color: #5f7045;
+  margin-left: 0.28rem;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.8rem, 2.8vw, 3.2rem);
+  margin-left: auto;
+  margin-right: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.hero-nav a {
+  color: #242b2e;
+  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+  pointer-events: auto;
+}
+
+.hero-nav a:hover {
+  color: #5f7045;
+}
+
+.hero-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btn-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #5f7045;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 0.98rem;
+  padding: 0.65rem 1.45rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 14px rgba(95, 112, 69, 0.25);
+  white-space: nowrap;
+}
+
+.hero-btn-top:hover {
+  background: #4f6037;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(95, 112, 69, 0.35);
+}
+
+.btn-arrow {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hero-btn-top:hover .btn-arrow,
+.hero-btn-main:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   1. STARTING TEXT: Centered Horizontally & Vertically in Viewport
+   ========================================================================== */
+.story-intro-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 52rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.4rem, 2.5vh, 2.2rem);
+  z-index: 22;
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.intro-title {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 80%;
+  font-weight: 850;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  color: #1b2628;
+  margin: 0;
+}
+
+.intro-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: #242c2f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hint-arrow {
+  font-size: 1.1rem;
+  color: #5f7045;
+  animation: hintBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* ==========================================================================
+   2. STORYTELLING & FINAL BEATS CONTAINER: Vertically Centered on Left
+   ========================================================================== */
+.hero-story-container {
+  position: absolute;
+  inset: 0;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4.5vw, 3.5rem);
+  display: flex;
+  align-items: center; /* TRUE VERTICAL CENTERING */
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Intermediate Step Cards: Punchy, Clean, No Eyebrow Clutter */
+.story-beat-card {
+  position: absolute;
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  will-change: opacity, transform;
+  transition: transform 0.12s ease-out;
+}
+
+.beat-step-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(95, 112, 69, 0.14);
+  color: #5f7045;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.beat-title {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 80%;
+  font-weight: 850;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: #1b2628;
+  margin: 0;
+}
+
+.beat-desc {
+  font-size: clamp(1.1rem, 1.5vw, 1.28rem);
+  line-height: 1.5;
+  color: #3e484e;
+  font-weight: 500;
+  margin: 0;
+  max-width: 28rem;
+}
+
+/* Final Hero Card: Mockup Match */
+.story-final-card {
+  position: absolute;
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  will-change: opacity, transform;
+}
+
+.final-eyebrow {
+  color: #5f7045;
+  font-size: clamp(0.82rem, 1.05vw, 0.95rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.final-title {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 80%;
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.8rem, 5.8vw, 4.8rem);
+  margin: 0;
+}
+
+.final-title .title-dark {
+  color: #1b2628;
+}
+
+.final-title .title-green {
+  color: #5f7045;
+}
+
+.final-lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.28rem);
+  line-height: 1.5;
+  color: #434c52;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hero-cta-wrap {
+  margin-top: 0.4rem;
+}
+
+.hero-btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #5f7045;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 1.08rem;
+  padding: 0.85rem 1.95rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  box-shadow: 0 6px 22px rgba(95, 112, 69, 0.28);
+}
+
+.hero-btn-main:hover {
+  background: #4f6037;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(95, 112, 69, 0.38);
+}
+
+/* Floating Step Progress Pill (Bottom Right) */
+.hero-progress-pill {
+  position: absolute;
+  bottom: clamp(1.2rem, 3.2vh, 2.2rem);
+  right: clamp(1.2rem, 3vw, 2.5rem);
+  z-index: 25;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.84rem;
+  font-weight: 680;
+  color: #242c2f;
+  letter-spacing: 0.01em;
+}
+
+.step-label {
+  white-space: nowrap;
+}
+
+.progress-track {
+  width: 64px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5f7045;
+  border-radius: 999px;
+  transition: width 0.08s ease-out;
+}
+
+/* Mobile Hamburger & Drawer */
+.hero-menu-toggle {
+  display: none;
+}
+
+.hero-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 20, 22, 0.96);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+
+.hero-mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.drawer-link {
+  color: #ECEEF0;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-stretch: 80%;
+  transition: color 0.15s ease;
+}
+
+.drawer-link:hover {
+  color: #748956;
+}
+
+.drawer-link.tel {
+  font-size: 1.15rem;
+  color: #A3AAB1;
+}
+
+.drawer-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-nav {
+    display: none;
+  }
+  .hero-btn-top {
+    display: none;
+  }
+  .hero-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    pointer-events: auto;
+  }
+  .hero-menu-toggle .bar {
+    width: 100%;
+    height: 2.5px;
+    background: #1b2628;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  .hero-menu-toggle.open .bar {
+    background: #ffffff;
+  }
+  .hero-menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hero-menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hero-menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .story-intro-centered {
+    width: 88%;
+  }
+
+  .hero-story-container {
+    align-items: flex-end;
+    padding-bottom: clamp(2rem, 5vh, 3.2rem);
+  }
+
+  .story-beat-card,
+  .story-final-card {
+    max-width: 100%;
+    background: rgba(243, 244, 245, 0.92);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    padding: 1.4rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-progress-pill {
+    display: none;
+  }
+}

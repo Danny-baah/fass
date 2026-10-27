@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fassadendämmung & Fassadensanierung in Ingolstadt | Fassaden Pro GmbH</title>
+<meta name="description" content="WDVS, Fassadensanierung, Fassadenanstrich und Außenputz in Ingolstadt und Umgebung. Fassaden Pro prüft vor Ort und führt sauber aus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..850&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="frames/hero/001.webp" type="image/webp">
+<link rel="preload" as="image" href="frames/hero/240.webp" type="image/webp">
+<style>
+:root{
+  --sage:#5f7045; --sage-dark:#4f6037; --sage-light:#748956;
+  --charcoal:#1b2628; --charcoal-soft:#2c3538;
+  --blue:#5f7045; --blue-ink:#5f7045; --btn-bg:#5f7045; --btn-fg:#ffffff;
+  --bg:#F3F4F5; --surface:#FFFFFF; --fg:#1E2226; --muted:#5D646B; --line:#D5D9DD;
+  --stein:#B9BDC0; --eps:#FFFFFF; --anthrazit:#2A2E33;
+  --thermo-a:#2A1C7A; --thermo-b:#7A2FB0; --thermo-c:#FF5A1F; --thermo-d:#FFD23F;
+  --overlay:rgba(243,244,245,.9);
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --head:64px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --blue:#7FA2FF; --blue-ink:#9DB7FF; --btn-bg:#2F63E0; --btn-fg:#ffffff;
+    --bg:#16191C; --surface:#1F2327; --fg:#ECEEF0; --muted:#A3AAB1; --line:#343A40;
+    --stein:#80868B; --eps:#E9ECEE; --anthrazit:#0F1113; --overlay:rgba(22,25,28,.88);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --blue:#7FA2FF; --blue-ink:#9DB7FF; --btn-bg:#2F63E0; --btn-fg:#ffffff;
+  --bg:#16191C; --surface:#1F2327; --fg:#ECEEF0; --muted:#A3AAB1; --line:#343A40;
+  --stein:#80868B; --eps:#E9ECEE; --anthrazit:#0F1113; --overlay:rgba(22,25,28,.88);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + var(--head))}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+img,canvas,video{max-width:100%;display:block}
+a{color:var(--blue-ink)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:3px}
+
+/* Schrift */
+h1,h2,h3{font-stretch:72%;font-weight:760;line-height:1.02;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2.6rem,5.4vw,4.6rem)}
+h2{font-size:clamp(2.1rem,3.8vw,3.3rem)}
+h3{font-size:1.25rem;font-stretch:85%;font-weight:700}
+p{margin:0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:34em}
+
+/* Kopfzeile */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);
+  border-bottom:1px solid var(--line);height:var(--head)}
+.head-in{max-width:1240px;margin:0 auto;height:100%;padding:0 1.25rem;display:flex;align-items:center;gap:1.5rem}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--fg);font-stretch:72%;font-weight:800;font-size:1.45rem;letter-spacing:-.01em}
+.brand svg{flex:none}
+.nav{display:flex;gap:1.25rem;margin-left:auto}
+.nav a{color:var(--fg);text-decoration:none;font-size:.98rem}
+.nav a:hover{color:var(--blue-ink)}
+.tel{color:var(--fg);text-decoration:none;font-weight:600;white-space:nowrap}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.3rem;
+  border-radius:4px;background:var(--btn-bg);color:var(--btn-fg);text-decoration:none;font-weight:650;border:0;font:inherit;font-weight:650;cursor:pointer}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px var(--fg)}
+.head .btn{min-height:42px;padding:.5rem 1rem}
+@media (max-width:899px){.nav,.tel{display:none}.head .btn{margin-left:auto;font-size:.95rem;padding:.45rem .85rem}.brand{font-size:1.25rem}}
+
+/* Scroll-Szenen */
+.scene{position:relative}
+.sticky{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--head));height:calc(100vh - var(--head) - env(safe-area-inset-top,0px));height:calc(100svh - var(--head) - env(safe-area-inset-top,0px));overflow:hidden}
+.scene-in{max-width:1240px;height:100%;margin:0 auto;padding:2rem 1.25rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,5rem);align-items:center}
+.stage{position:relative;height:min(100%,900px);aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:var(--line)}
+.stage canvas,.stage video,.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.copy{display:grid;gap:1.4rem;max-width:34rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.4rem}
+.textlink{font-weight:650;text-underline-offset:.2em}
+
+/* Schichten-Legende (Schnitt wie in einer Bauzeichnung) */
+.layers{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.15rem;border-left:2px solid var(--line)}
+.layers li{display:grid;grid-template-columns:2.2rem 1fr;gap:.9rem;align-items:start;padding:.65rem 0 .65rem 1rem;margin-left:-2px;border-left:2px solid transparent;color:var(--muted);transition:color .25s,border-color .25s}
+.layers li.on{color:var(--fg);border-left-color:var(--blue)}
+.layers .sw{width:2.2rem;height:2.2rem;border-radius:2px;border:1px solid var(--line)}
+.layers b{display:block;color:inherit;font-stretch:85%;font-size:1.1rem}
+.layers span{font-size:.95rem}
+.layers li:not(.on) span{display:none}
+.sw-1{background:repeating-linear-gradient(0deg,var(--stein) 0 9px,var(--bg) 9px 10px),var(--stein)}
+.sw-2{background:var(--eps);background-image:radial-gradient(circle,var(--muted) 1.6px,transparent 2px);background-size:12px 12px}
+.sw-3{background:#C9CCCE;background-image:linear-gradient(45deg,rgba(255,255,255,.55) 1px,transparent 1px),linear-gradient(-45deg,rgba(255,255,255,.55) 1px,transparent 1px);background-size:7px 7px}
+.sw-4{background:#F6F5F1}
+
+/* Wärmeskala */
+.scale{display:grid;gap:.4rem;max-width:22rem}
+.scale-bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--thermo-a),var(--thermo-b),var(--thermo-c),var(--thermo-d))}
+.scale-lab{display:flex;justify-content:space-between;font-size:.88rem;color:var(--muted)}
+.scale-mark{position:relative;height:10px;margin-top:-14px}
+.scale-mark i{position:absolute;top:-4px;width:4px;height:18px;border-radius:2px;background:var(--fg);transform:translateX(-50%);left:100%}
+
+/* Farbwähler */
+.colors{padding:clamp(4rem,8vw,7rem) 1.25rem}
+.colors-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,5rem);align-items:center}
+.colors .stage{height:min(80vh,820px)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
+.chip{display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:.4rem 1rem .4rem .45rem;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-weight:600;cursor:pointer}
+.chip i{width:2rem;height:2rem;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.chip[aria-pressed="true"]{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+.fade{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transition:opacity .45s ease}
+
+/* Inhalt unten */
+.band{padding:clamp(4rem,8vw,7rem) 1.25rem;border-top:1px solid var(--line)}
+.band-in{max-width:1240px;margin:0 auto}
+.faq{display:grid;grid-template-columns:minmax(0,20rem) minmax(0,1fr);gap:clamp(2rem,5vw,5rem)}
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:650;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--blue-ink)}
+details[open] summary::after{content:"–"}
+details p{margin-top:.7rem;color:var(--muted);max-width:40em}
+.contact{background:var(--anthrazit);color:#F1F2F3;border:0}
+.contact a{color:#fff}
+.contact .lead{color:#B8BEC4}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:end}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.25rem;margin:0}
+.contact dt{color:#B8BEC4}
+.contact dd{margin:0}
+.contact .btn{background:#fff;color:#003796}
+.areas{margin-top:1.5rem;color:#B8BEC4;font-size:.95rem}
+footer{background:var(--anthrazit);color:#B8BEC4;border-top:1px solid #3A4046;padding:1.5rem 1.25rem;font-size:.9rem}
+footer .band-in{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;justify-content:space-between}
+footer a{color:#DDE1E4}
+
+.hint{display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.92rem}
+.hint svg{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+
+/* Desktop: mobile narrative is hidden */
+.mobile-narrative{display:none}
+
+/* Mobil: Video füllt den Bildschirm, Text liegt unten darüber */
+@media (max-width:899px){
+  .scene-in{display:block;padding:0;position:relative}
+  .stage{position:absolute;inset:0;height:100%;width:100%;aspect-ratio:auto;border-radius:0;z-index:1}
+  .scene > .sticky > .scene-in > .copy{display:none!important}
+  
+  /* Mobile Cinematic Narrative Experience */
+  .mobile-narrative{display:block;position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+
+  /* Scrims: removed dark bands */
+  .mn-scrim{display:none}
+
+  /* Top Bar (Header/Badge & Progress) */
+  .mn-top{position:absolute;top:calc(env(safe-area-inset-top,0px) + .85rem);left:1rem;right:1rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;z-index:10;pointer-events:none;transition:opacity .3s ease}
+  .mn-pill{display:inline-flex;align-items:center;padding:.32rem .75rem;border-radius:999px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(0,0,0,.08);color:#0F172A;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  
+  /* Segmented progress indicator */
+  .mn-segments{display:flex;gap:4px;align-items:center}
+  .mn-seg{width:18px;height:3.5px;border-radius:2px;background:rgba(0,0,0,.18);transition:all .25s ease}
+  .mn-seg.on{background:#003796;box-shadow:0 0 8px rgba(0,55,150,.4);width:24px}
+
+  /* Status tag (e.g. Ungedämmt / Gedämmt, Vorher / Nachher) */
+  .mn-status-tag{padding:.32rem .75rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;transition:all .3s ease;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.2)}
+  .mn-badge-uninsulated{background:rgba(215,58,74,.88);box-shadow:0 0 12px rgba(215,58,74,.35)}
+  .mn-badge-insulated{background:rgba(40,167,69,.9);box-shadow:0 0 12px rgba(40,167,69,.35)}
+  .mn-badge-before{background:rgba(227,116,0,.9);box-shadow:0 0 12px rgba(227,116,0,.35)}
+  .mn-badge-after{background:rgba(0,55,150,.9);box-shadow:0 0 12px rgba(0,55,150,.35)}
+
+  /* Intro overlay in Hero: NO DARK BOX, centered vertically */
+  .mn-intro{
+    position:absolute;inset:0;z-index:8;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:1.5rem 1.25rem;
+    text-align:left;pointer-events:none;
+    transition:opacity .35s ease,transform .35s ease;
+  }
+  .mn-intro-eyebrow{margin-bottom:.35rem}
+  .mn-intro-pill{
+    display:inline-flex;align-items:center;
+    background:#003796;color:#ffffff;
+    font-size:.74rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase;
+    padding:.32rem .8rem;border-radius:999px;
+    box-shadow:0 4px 14px rgba(0,55,150,.35);
+  }
+  .mn-intro-title{
+    font-size:clamp(2.1rem,7.8vw,2.75rem);
+    font-stretch:72%;font-weight:850;line-height:1.04;letter-spacing:-.015em;
+    color:#0F172A;
+    text-shadow:0 1px 2px rgba(255,255,255,.9),0 2px 10px rgba(255,255,255,.7);
+    margin:0 0 .45rem;
+  }
+  .mn-intro-hl{
+    color:#003796;
+    display:inline-block;
+    text-shadow:0 1px 2px rgba(255,255,255,.9),0 2px 10px rgba(255,255,255,.7);
+  }
+  .mn-intro-sub{
+    font-size:.96rem;font-weight:550;line-height:1.45;
+    color:#334155;
+    text-shadow:0 1px 2px rgba(255,255,255,.85);
+    max-width:24em;margin:0 0 1rem;
+  }
+  .mn-scroll-cue{
+    display:inline-flex;align-items:center;gap:.45rem;
+    padding:.45rem 1rem;border-radius:999px;
+    background:#0F172A;color:#ffffff;
+    font-size:.82rem;font-weight:650;
+    width:max-content;
+    box-shadow:0 4px 16px rgba(15,23,42,.25);
+  }
+  .mn-scroll-cue svg{animation:cueBounce 1.6s ease-in-out infinite}
+  @keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+  /* Bottom Floating Narrative Card */
+  .mn-bottom{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + .85rem);left:.85rem;right:.85rem;z-index:10;pointer-events:none}
+  .mn-card{background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:.85rem 1.05rem;box-shadow:0 8px 30px rgba(0,0,0,.12);color:#0F172A;position:relative}
+  .mn-steps-box{position:relative;min-height:86px}
+  .mn-steps-box.mn-compact{min-height:70px}
+  .mn-phase-item{position:absolute;inset:0;opacity:0;transform:translateY(6px);transition:opacity .28s ease,transform .28s ease;pointer-events:none;display:flex;flex-direction:column;justify-content:center}
+  .mn-phase-item.on{opacity:1;transform:translateY(0);pointer-events:auto}
+  
+  .mn-phase-meta{display:flex;align-items:center;gap:.45rem;margin-bottom:.2rem}
+  .mn-phase-num{font-size:.72rem;font-weight:800;color:#003796;background:rgba(0,55,150,.1);padding:1px 5px;border-radius:3px}
+  .mn-phase-lbl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#64748B}
+  .mn-phase-title{font-size:1.05rem;font-stretch:75%;font-weight:780;line-height:1.2;margin:0 0 .2rem;color:#0F172A}
+  .mn-phase-desc{font-size:.85rem;line-height:1.35;color:#475569;margin:0}
+
+  /* Actions inside mobile narrative */
+  .mn-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;pointer-events:auto}
+  .mn-actions .btn{padding:.5rem 1rem;font-size:.9rem;min-height:40px;border-radius:6px;flex:1 1 auto;text-align:center}
+  .mn-ghost{background:rgba(0,0,0,.04)!important;color:#0F172A!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)!important}
+  .mn-btn-sm{padding:.45rem .9rem;font-size:.88rem;min-height:38px}
+  .mn-link{color:#003796;font-weight:700;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem}
+  .mn-link:hover{text-decoration:underline}
+
+  /* Scale bar inside mobile card */
+  .mn-scale-widget{margin-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:.55rem}
+  .mn-scale-widget .scale-bar{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--thermo-a),var(--thermo-b),var(--thermo-c),var(--thermo-d))}
+  .mn-scale-widget .scale-mark{position:relative;height:6px;margin-top:-10px}
+  .mn-scale-widget .scale-mark i{position:absolute;top:-3px;width:3px;height:12px;border-radius:2px;background:#0F172A;box-shadow:0 0 4px rgba(0,0,0,.4);transform:translateX(-50%);left:100%}
+  .mn-scale-widget .scale-lab{display:flex;justify-content:space-between;font-size:.76rem;color:#64748B;margin-top:4px}
+
+  h1{font-size:2.15rem}
+  h2{font-size:1.9rem}
+  .lead{font-size:1rem}
+  .copy .lead.long{display:none}
+  .layers{display:none}
+  .mstep{display:block!important}
+  .faq,.contact-grid{grid-template-columns:1fr}
+
+  /* Section 5: Full building view experience (9:16 natural portrait), color palette directly below */
+  .colors{padding:clamp(2.5rem,6vw,4rem) 1.25rem}
+  .colors-in{display:flex;flex-direction:column;gap:1.25rem}
+  .colors .stage{
+    order:1;
+    position:relative;
+    width:100%;
+    max-width:390px;
+    aspect-ratio:9/16;
+    height:auto;
+    max-height:none;
+    margin:0 auto;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.14);
+  }
+  .colors .stage img,
+  .colors .stage video,
+  .colors .stage canvas{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;
+    object-position:center center;
+  }
+
+  .colors .copy{
+    order:2;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  }
+  /* Color Palette Chips directly under the full building and above text */
+  .colors .copy .chips{
+    order:1;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.45rem;
+    margin:0 0 .9rem;
+  }
+  .chip{
+    min-height:36px;
+    padding:.3rem .75rem .3rem .35rem;
+    font-size:.82rem;
+    gap:.4rem;
+    border-radius:999px;
+  }
+  .chip i{
+    width:1.35rem;
+    height:1.35rem;
+  }
+  .colors .copy h2{
+    order:2;
+    font-size:1.55rem;
+    margin:0 0 .35rem;
+    text-align:center;
+  }
+  .colors .copy .lead{
+    order:3;
+    font-size:.95rem;
+    line-height:1.45;
+    color:var(--muted);
+    max-width:28em;
+    margin:0 auto;
+  }
+  .colors .copy .actions{
+    order:4;
+    margin-top:1rem;
+    justify-content:center;
+  }
+  .colors .copy .actions .btn{
+    min-height:46px;
+    font-size:.95rem;
+    padding:.6rem 1.5rem;
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
+  }
+}
+.head-in{gap:.75rem}
+@media (max-width:440px){.lg{display:none}}
+.mstep{display:none;font-size:.98rem}
+.mstep b{font-stretch:85%;font-size:1.05rem;display:block}
+@media (prefers-reduced-motion: reduce){.hint svg{animation:none}.fade{transition:none}}
+
+/* ==========================================================================
+   CINEMATIC SCROLL HERO STYLES (Mockup Exact Match)
+   ========================================================================== */
+.hero-scene {
+  position: relative;
+  height: 400vh; /* Smooth cinematic scrub distance */
+  width: 100%;
+  background: #dedede;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 30;
+  background: #dedede;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(18px);
+  will-change: opacity, transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.hero-header {
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(1.4rem, 3.2vw, 2.4rem) clamp(1.25rem, 4.5vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.hero-roof {
+  display: block;
+  overflow: visible;
+}
+
+.hero-brand-text {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 84%;
+  font-weight: 850;
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  letter-spacing: -0.015em;
+  line-height: 1;
+}
+
+.hero-brand-text .brand-dark {
+  color: #1b2628;
+}
+
+.hero-brand-text .brand-green {
+  color: #5f7045;
+  margin-left: 0.28rem;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.8rem, 2.8vw, 3.2rem);
+  margin-left: auto;
+  margin-right: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.hero-nav a {
+  color: #242b2e;
+  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+  pointer-events: auto;
+}
+
+.hero-nav a:hover {
+  color: #5f7045;
+}
+
+.hero-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btn-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #5f7045;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 0.98rem;
+  padding: 0.65rem 1.45rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 14px rgba(95, 112, 69, 0.25);
+  white-space: nowrap;
+}
+
+.hero-btn-top:hover {
+  background: #4f6037;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(95, 112, 69, 0.35);
+}
+
+.btn-arrow {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hero-btn-top:hover .btn-arrow,
+.hero-btn-main:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.hero-body {
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4.5vw, 3.5rem) clamp(3rem, 7vw, 6rem);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-copy-wrap {
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.hero-eyebrow {
+  color: #5f7045;
+  font-size: clamp(0.82rem, 1.05vw, 0.95rem);
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-stretch: 80%;
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.8rem, 5.8vw, 4.8rem);
+  margin: 0;
+}
+
+.hero-title .title-dark {
+  color: #1b2628;
+}
+
+.hero-title .title-green {
+  color: #5f7045;
+}
+
+.hero-lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.28rem);
+  line-height: 1.5;
+  color: #434c52;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hero-cta-wrap {
+  margin-top: 0.35rem;
+}
+
+.hero-btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #5f7045;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 1.08rem;
+  padding: 0.85rem 1.95rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  box-shadow: 0 6px 22px rgba(95, 112, 69, 0.28);
+}
+
+.hero-btn-main:hover {
+  background: #4f6037;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(95, 112, 69, 0.38);
+}
+
+/* Scroll Cue */
+.hero-scroll-cue {
+  position: absolute;
+  bottom: clamp(1.2rem, 3.2vh, 2.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cue-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(27, 38, 40, 0.82);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cue-bounce {
+  animation: cueDown 1.7s ease-in-out infinite;
+}
+
+@keyframes cueDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* Mobile Hamburger & Drawer */
+.hero-menu-toggle {
+  display: none;
+}
+
+.hero-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 20, 22, 0.95);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+
+.hero-mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.drawer-link {
+  color: #ECEEF0;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-stretch: 80%;
+  transition: color 0.15s ease;
+}
+
+.drawer-link:hover {
+  color: #748956;
+}
+
+.drawer-link.tel {
+  font-size: 1.15rem;
+  color: #A3AAB1;
+}
+
+.drawer-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Global Head Smooth Slide-in when leaving hero */
+#globalHead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  height: var(--head);
+  transform: translateY(-100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+#globalHead.visible {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-nav {
+    display: none;
+  }
+  .hero-btn-top {
+    display: none;
+  }
+  .hero-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    pointer-events: auto;
+  }
+  .hero-menu-toggle .bar {
+    width: 100%;
+    height: 2.5px;
+    background: #1b2628;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  .hero-menu-toggle.open .bar {
+    background: #ffffff;
+  }
+  .hero-menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hero-menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hero-menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .hero-copy-wrap {
+    max-width: 100%;
+    background: rgba(243, 244, 245, 0.88);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    padding: 1.4rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.09);
+  }
+  .hero-body {
+    align-items: flex-end;
+    padding-bottom: clamp(1.8rem, 4vh, 2.8rem);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- CINEMATIC SCROLL HERO -->
+<section class="hero-scene" id="heroScene" aria-label="Fassaden Pro Hero">
+  <div class="hero-sticky" id="heroSticky">
+    <canvas id="heroCanvas" class="hero-canvas" aria-label="Cinematische 3D-Verwandlung der Fassadendämmung"></canvas>
+
+    <!-- Final Hero Overlay (Matches Mockup Reference) -->
+    <div class="hero-overlay" id="heroOverlay">
+      <!-- Desktop & Mobile Top Bar -->
+      <header class="hero-header" id="heroHeader">
+        <a class="hero-brand" href="https://www.fassaden-pro.de/" aria-label="Fassaden Pro GmbH Startseite">
+          <svg class="hero-roof" width="34" height="16" viewBox="0 0 34 16" fill="none" aria-hidden="true">
+            <path d="M2 14L17 2L32 14" stroke="#5f7045" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="hero-brand-text">
+            <span class="brand-dark">FASSADEN</span><span class="brand-green">PRO</span>
+          </div>
+        </a>
+
+        <nav class="hero-nav" aria-label="Hero Hauptnavigation">
+          <a href="#daemmung">Leistungen</a>
+          <a href="https://www.fassaden-pro.de/referenzen/">Referenzen</a>
+          <a href="#sanierung">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="hero-header-right">
+          <a class="hero-btn-top" href="https://www.fassaden-pro.de/kontakt/">
+            <span>Angebot anfordern</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button class="hero-menu-toggle" id="heroMenuToggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Copy Block -->
+      <div class="hero-body">
+        <div class="hero-copy-wrap">
+          <div class="hero-eyebrow">FACHBETRIEB · INGOLSTADT UND UMGEBUNG</div>
+          <h1 class="hero-title">
+            <span class="title-dark">Die Fassade.</span><br>
+            <span class="title-green">Neu gedacht.</span>
+          </h1>
+          <p class="hero-lead">
+            Wärmedämmung und Fassadensanierung.<br>
+            Präzise geplant. Sauber ausgeführt.
+          </p>
+          <div class="hero-cta-wrap">
+            <a class="hero-btn-main" href="https://www.fassaden-pro.de/kontakt/">
+              <span>Projekt besprechen</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="hero-mobile-drawer" id="heroMobileDrawer" aria-hidden="true">
+        <div class="hero-drawer-inner">
+          <nav class="hero-drawer-nav">
+            <a href="#daemmung" class="drawer-link">Leistungen</a>
+            <a href="https://www.fassaden-pro.de/referenzen/" class="drawer-link">Referenzen</a>
+            <a href="#sanierung" class="drawer-link">Über uns</a>
+            <a href="#kontakt" class="drawer-link">Kontakt</a>
+            <a href="tel:+4917624375915" class="drawer-link tel">0176 24375915</a>
+          </nav>
+          <div class="hero-drawer-footer">
+            <a class="hero-btn-main drawer-btn" href="https://www.fassaden-pro.de/kontakt/">
+              <span>Angebot anfordern</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Initial Scroll Cue -->
+    <div class="hero-scroll-cue" id="heroScrollCue">
+      <div class="cue-pill">
+        <svg class="cue-bounce" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+        <span>Scrollen für Verwandlung</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<header class="head" id="globalHead">
+  <div class="head-in">
+    <a class="brand" href="https://www.fassaden-pro.de/" aria-label="Fassaden Pro GmbH, zur Startseite">
+      <svg width="28" height="14" viewBox="0 0 34 16" fill="none" aria-hidden="true">
+        <path d="M2 14L17 2L32 14" stroke="#5f7045" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-family:'Archivo',sans-serif;font-weight:850;font-stretch:82%">
+        <span style="color:#1b2628">FASSADEN</span><span style="color:#5f7045;margin-left:3px">PRO</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#daemmung">Leistungen</a>
+      <a href="https://www.fassaden-pro.de/referenzen/">Referenzen</a>
+      <a href="#sanierung">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+4917624375915">0176 24375915</a>
+    <a class="btn hero-btn-top" style="padding:.5rem 1.15rem;min-height:38px;box-shadow:none" href="https://www.fassaden-pro.de/kontakt/">
+      <span>Angebot anfordern</span>
+      <svg class="btn-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+
+<main>
+
+<!-- 1  WDVS -->
+<section class="scene" id="daemmung" data-seq="wand" data-len="4.2" aria-labelledby="h-wdvs">
+  <div class="sticky"><div class="scene-in">
+    <div class="copy">
+      <h2 id="h-wdvs">Fassadendämmung in Ingolstadt. Schicht für Schicht.</h2>
+      <p class="lead long">So entsteht ein Wärmedämmverbundsystem (WDVS) an Ihrer Wand: mit Systemen von Sto und Knauf, verarbeitet von unseren eigenen Monteuren.</p>
+      <ol class="layers" data-steps="0,.08,.36,.69">
+        <li class="on"><i class="sw sw-1" aria-hidden="true"></i><div><b>Mauerwerk prüfen</b><span>Vor dem Angebot schauen wir uns Untergrund, Anschlüsse und Gerüst vor Ort an.</span></div></li>
+        <li><i class="sw sw-2" aria-hidden="true"></i><div><b>Dämmplatten und Dübel</b><span>Die Platten werden verklebt und zusätzlich verdübelt, fugendicht und eben.</span></div></li>
+        <li><i class="sw sw-3" aria-hidden="true"></i><div><b>Armierung</b><span>Gewebe im Grundputz nimmt Spannungen auf und schützt vor Rissen.</span></div></li>
+        <li><i class="sw sw-4" aria-hidden="true"></i><div><b>Oberputz</b><span>Der fertige Putz schützt die Dämmung vor Wind und Wetter.</span></div></li>
+      </ol>
+      <p class="mstep" aria-hidden="true"></p>
+      <div class="actions">
+        <a class="btn" href="https://www.fassaden-pro.de/kontakt/">Angebot anfordern</a>
+        <a class="btn ghost" href="https://www.fassaden-pro.de/daemmungsrechner/">Dämmkosten berechnen</a>
+      </div>
+      <p class="hint"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5 8 13.5l5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Weiterscrollen, um den Aufbau zu sehen</p>
+    </div>
+    <div class="stage"><canvas aria-label="Animation: Eine nackte Wand wird Schicht für Schicht gedämmt und verputzt" role="img"></canvas></div>
+
+    <!-- Mobile Cinematic Narrative Overlay -->
+    <div class="mobile-narrative" data-mn="wand" aria-hidden="true">
+      <div class="mn-scrim mn-scrim-top"></div>
+      <div class="mn-scrim mn-scrim-bottom"></div>
+      <div class="mn-top">
+        <span class="mn-pill mn-step-tag">WDVS · Aufbau</span>
+        <div class="mn-segments">
+          <span class="mn-seg on"></span>
+          <span class="mn-seg"></span>
+          <span class="mn-seg"></span>
+          <span class="mn-seg"></span>
+        </div>
+      </div>
+      <div class="mn-intro">
+        <div class="mn-intro-eyebrow"><span class="mn-intro-pill">Fassaden Pro Ingolstadt</span></div>
+        <div class="mn-intro-title">Fassadendämmung.<br><span class="mn-intro-hl">Schicht für Schicht.</span></div>
+        <p class="mn-intro-sub">So entsteht ein modernes WDVS an Ihrer Wand – meisterhaft ausgeführt.</p>
+        <div class="mn-scroll-cue">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+          <span>Scrollen zum Entdecken</span>
+        </div>
+      </div>
+      <div class="mn-bottom">
+        <div class="mn-card">
+          <div class="mn-steps-box">
+            <div class="mn-phase-item on" data-phase="0">
+              <div class="mn-phase-meta"><span class="mn-phase-num">01</span><span class="mn-phase-lbl">Schritt 1 von 4</span></div>
+              <div class="mn-phase-title">Mauerwerk prüfen</div>
+              <p class="mn-phase-desc">Vor dem Angebot prüfen wir Untergrund, Anschlüsse und Gerüst vor Ort.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="1">
+              <div class="mn-phase-meta"><span class="mn-phase-num">02</span><span class="mn-phase-lbl">Schritt 2 von 4</span></div>
+              <div class="mn-phase-title">Dämmplatten & Dübel</div>
+              <p class="mn-phase-desc">Platten werden fugendicht verklebt und zusätzlich im Mauerwerk verdübelt.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="2">
+              <div class="mn-phase-meta"><span class="mn-phase-num">03</span><span class="mn-phase-lbl">Schritt 3 von 4</span></div>
+              <div class="mn-phase-title">Armierungsgewebe</div>
+              <p class="mn-phase-desc">Eingebettetes Gewebe im Grundputz nimmt Spannungen auf und schützt vor Rissen.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="3">
+              <div class="mn-phase-meta"><span class="mn-phase-num">04</span><span class="mn-phase-lbl">Schritt 4 von 4</span></div>
+              <div class="mn-phase-title">Wetterfester Oberputz</div>
+              <p class="mn-phase-desc">Der fertige Putz schützt die Dämmung dauerhaft vor Schlagregen und Frost.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="4">
+              <div class="mn-phase-meta"><span class="mn-phase-num">✓</span><span class="mn-phase-lbl">WDVS Fertiggestellt</span></div>
+              <div class="mn-phase-title">Ihre Fassade. Bestens geschützt.</div>
+              <div class="mn-actions">
+                <a class="btn" href="https://www.fassaden-pro.de/kontakt/">Angebot anfordern</a>
+                <a class="btn ghost mn-ghost" href="https://www.fassaden-pro.de/daemmungsrechner/">Dämmkosten berechnen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 2  Wärmebild -->
+<section class="scene" data-seq="waerme" data-len="2.6" aria-labelledby="h-waerme">
+  <div class="sticky"><div class="scene-in">
+    <div class="copy">
+      <h2 id="h-waerme">Die Wärme bleibt im Haus.</h2>
+      <p class="lead">Auf dem Wärmebild sieht man es sofort: Ungedämmte Wände geben viel Wärme nach außen ab. Nach der Dämmung bleibt sie drinnen, und die Heizung muss weniger leisten.</p>
+      <div class="scale" aria-hidden="true">
+        <div class="scale-bar"></div>
+        <div class="scale-mark"><i></i></div>
+        <div class="scale-lab"><span>wenig Wärmeverlust</span><span>viel Wärmeverlust</span></div>
+      </div>
+      <div class="actions"><a class="btn" href="https://www.fassaden-pro.de/einsparrechner/">Mögliche Ersparnis berechnen</a></div>
+    </div>
+    <div class="stage"><canvas aria-label="Wärmebild: Ein Haus verliert erst viel Wärme und ist nach der Dämmung kühl" role="img"></canvas></div>
+
+    <!-- Mobile Cinematic Narrative Overlay -->
+    <div class="mobile-narrative" data-mn="waerme" aria-hidden="true">
+      <div class="mn-scrim mn-scrim-top"></div>
+      <div class="mn-scrim mn-scrim-bottom"></div>
+      <div class="mn-top">
+        <span class="mn-pill mn-step-tag">Thermografie</span>
+        <div class="mn-status-tag mn-badge-uninsulated">Ungedämmt</div>
+      </div>
+      <div class="mn-bottom">
+        <div class="mn-card">
+          <div class="mn-scale-widget">
+            <div class="scale-bar"></div>
+            <div class="scale-mark"><i></i></div>
+            <div class="scale-lab"><span>wenig Wärmeverlust</span><span>hoher Wärmeverlust</span></div>
+          </div>
+          <div class="mn-steps-box mn-compact">
+            <div class="mn-phase-item on" data-phase="0">
+              <div class="mn-phase-title">Hoher Wärmeverlust nach außen</div>
+              <p class="mn-phase-desc">Ungedämmte Wände geben teure Heizwärme ungenutzt an die Umwelt ab.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="1">
+              <div class="mn-phase-title">Die Wärme bleibt im Haus</div>
+              <p class="mn-phase-desc">Nach der Dämmung sinkt die Abstrahlung. Die Heizung spart sofort bares Geld.</p>
+              <div class="mn-actions">
+                <a class="btn mn-btn-sm" href="https://www.fassaden-pro.de/einsparrechner/">Ersparnis berechnen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 3  Sanierung -->
+<section class="scene" id="sanierung" data-seq="vorher" data-len="2.6" aria-labelledby="h-san">
+  <div class="sticky"><div class="scene-in">
+    <div class="copy">
+      <h2 id="h-san">Fassadensanierung: Aus müde wird neu.</h2>
+      <p class="lead">Risse, Verwitterung, verblasste Farbe. Wir prüfen den Untergrund, sanieren die Schäden und bauen Putz und Anstrich neu auf, auf Wunsch zusammen mit einer Dämmung.</p>
+      <div class="actions"><a class="textlink" href="https://www.fassaden-pro.de/leistungen/fassadensanierung-ingolstadt/">Mehr zur Fassadensanierung</a></div>
+    </div>
+    <div class="stage"><canvas aria-label="Vorher und nachher: Eine alte, rissige Fassade wird zur frisch sanierten Fassade" role="img"></canvas></div>
+
+    <!-- Mobile Cinematic Narrative Overlay -->
+    <div class="mobile-narrative" data-mn="vorher" aria-hidden="true">
+      <div class="mn-scrim mn-scrim-top"></div>
+      <div class="mn-scrim mn-scrim-bottom"></div>
+      <div class="mn-top">
+        <span class="mn-pill mn-step-tag">Fassadensanierung</span>
+        <div class="mn-status-tag mn-badge-before">Vorher</div>
+      </div>
+      <div class="mn-bottom">
+        <div class="mn-card">
+          <div class="mn-steps-box mn-compact">
+            <div class="mn-phase-item on" data-phase="0">
+              <div class="mn-phase-title">Ausgangslage: Risse & Verwitterung</div>
+              <p class="mn-phase-desc">Abgeplatzter Putz und feine Risse gefährden die Bausubstanz.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="1">
+              <div class="mn-phase-title">Aus müde wird neu</div>
+              <p class="mn-phase-desc">Fachgerecht saniert und geschützt – auf Wunsch mit neuer Dämmung.</p>
+              <div class="mn-actions">
+                <a class="mn-link" href="https://www.fassaden-pro.de/leistungen/fassadensanierung-ingolstadt/">Mehr zur Sanierung →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 4  Außenputz -->
+<section class="scene" data-seq="risse" data-len="2.2" aria-labelledby="h-putz">
+  <div class="sticky"><div class="scene-in">
+    <div class="copy">
+      <h2 id="h-putz">Außenputz, der wieder geschlossen ist.</h2>
+      <p class="lead">Durch feine Risse dringt Feuchtigkeit in die Wand. Wir sanieren den Putz sauber, inklusive Sockel- und Anschlussdetails, bis die Fläche wieder gleichmäßig und dicht ist.</p>
+      <div class="actions"><a class="textlink" href="https://www.fassaden-pro.de/leistungen/aussenputz/">Mehr zu Außenputz und Putzsanierung</a></div>
+    </div>
+    <div class="stage"><canvas aria-label="Nahaufnahme: Risse im Putz schließen sich, die Fläche wird glatt" role="img"></canvas></div>
+
+    <!-- Mobile Cinematic Narrative Overlay -->
+    <div class="mobile-narrative" data-mn="risse" aria-hidden="true">
+      <div class="mn-scrim mn-scrim-top"></div>
+      <div class="mn-scrim mn-scrim-bottom"></div>
+      <div class="mn-top">
+        <span class="mn-pill mn-step-tag">Putzsanierung</span>
+        <div class="mn-status-tag mn-badge-before">Schadensbild</div>
+      </div>
+      <div class="mn-bottom">
+        <div class="mn-card">
+          <div class="mn-steps-box mn-compact">
+            <div class="mn-phase-item on" data-phase="0">
+              <div class="mn-phase-title">Haarrisse im Außenputz</div>
+              <p class="mn-phase-desc">Feuchtigkeit dringt ein und führt im Winter zu Frostsprengungen.</p>
+            </div>
+            <div class="mn-phase-item" data-phase="1">
+              <div class="mn-phase-title">Wieder dauerhaft geschlossen</div>
+              <p class="mn-phase-desc">Elastischer Armierungsputz überbrückt Risse und hält die Wand trocken.</p>
+              <div class="mn-actions">
+                <a class="mn-link" href="https://www.fassaden-pro.de/leistungen/aussenputz/">Mehr zu Außenputz →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 5  Anstrich -->
+<section class="colors" id="anstrich" aria-labelledby="h-farbe">
+  <div class="colors-in">
+    <div class="copy" style="position:static;background:none;padding:0;backdrop-filter:none;-webkit-backdrop-filter:none">
+      <h2 id="h-farbe">Welche Farbe passt zu Ihrem Haus?</h2>
+      <p class="lead">Tippen Sie eine Farbe an und sehen Sie, wie sich die Fassade verändert. Den passenden Ton finden wir gemeinsam bei der Farbberatung.</p>
+      <div class="chips" role="group" aria-label="Fassadenfarbe wählen">
+        <button class="chip" type="button" data-color="white" aria-pressed="true"><i style="background:#F2F1EC"></i>Weiß</button>
+        <button class="chip" type="button" data-color="beige" aria-pressed="false"><i style="background:#D9C8A6"></i>Sandbeige</button>
+        <button class="chip" type="button" data-color="grau" aria-pressed="false"><i style="background:#BFC3C6"></i>Hellgrau</button>
+        <button class="chip" type="button" data-color="gruen" aria-pressed="false"><i style="background:#B9C7B0"></i>Salbeigrün</button>
+        <button class="chip" type="button" data-color="terrakotta" aria-pressed="false"><i style="background:#E3A486"></i>Terrakotta</button>
+      </div>
+      <div class="actions"><a class="btn" href="https://www.fassaden-pro.de/anstrichrechner/">Anstrichkosten berechnen</a></div>
+    </div>
+    <div class="stage" id="colorStage">
+      <img id="colorPoster" alt="Frisch saniertes Haus mit weißer Fassade">
+      <video id="colorVideo" muted playsinline preload="auto" aria-hidden="true" style="opacity:0"></video>
+      <canvas class="fade" id="colorFade" aria-hidden="true" style="opacity:0"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band" aria-labelledby="h-faq">
+  <div class="band-in faq">
+    <h2 id="h-faq">Häufige Fragen</h2>
+    <div>
+      <details><summary>Welche Leistung ist für mein Gebäude richtig?</summary><p>Das hängt vom Zustand, Ihrem Ziel und dem Budget ab. Bei hohem energetischem Sanierungsbedarf steht meist ein WDVS im Vordergrund. Ist der Aufbau noch intakt, reicht oft eine Fassadensanierung oder ein neuer Anstrich.</p></details>
+      <details><summary>Arbeitet Fassaden Pro auch außerhalb von Ingolstadt?</summary><p>Ja. Unser Schwerpunkt liegt auf Ingolstadt und einem realistischen Umkreis in Oberbayern. Entscheidend sind Projektgröße, Ablauf und Baustellenlogistik.</p></details>
+      <details><summary>Bekomme ich vorab einen Festpreis?</summary><p>Für einen belastbaren Preis brauchen wir eine Besichtigung. Fläche, Gerüst, Untergrund, Anschlüsse und Materialaufbau beeinflussen den Aufwand deutlich. Für eine erste Einordnung helfen unsere Rechner.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section class="band contact" aria-labelledby="h-kontakt">
+  <div class="band-in contact-grid">
+    <div class="copy" style="position:static;background:none;padding:0;backdrop-filter:none;-webkit-backdrop-filter:none;max-width:36rem">
+      <h2 id="h-kontakt">Ihre Fassade besprechen.</h2>
+      <p class="lead">Wir kommen vorbei, prüfen das Objekt und machen Ihnen ein klares Angebot.</p>
+      <div class="actions"><a class="btn" href="https://www.fassaden-pro.de/kontakt/">Angebot anfordern</a><a class="btn ghost" style="color:#fff;box-shadow:inset 0 0 0 1.5px #fff" href="https://wa.me/4917624375915">Per WhatsApp schreiben</a></div>
+    </div>
+    <div>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+4917624375915">+49 176 24375915</a></dd>
+        <dt>E-Mail</dt><dd><a href="mailto:info@fassaden-pro.de">info@fassaden-pro.de</a></dd>
+        <dt>Adresse</dt><dd>Fassaden Pro GmbH<br>Knabelgutstraße 6 A<br>85049 Ingolstadt</dd>
+      </dl>
+      <p class="areas">Im Einsatz in Ingolstadt, München, Regensburg, Augsburg, Neuburg an der Donau und Landshut.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="band-in">
+    <span>© 2026 Fassaden Pro GmbH</span>
+    <span><a href="https://www.fassaden-pro.de/impressum/">Impressum</a> &nbsp; <a href="https://www.fassaden-pro.de/datenschutz/">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script>
+const SEQ={"wand": ["frames/wand1/001.webp", "frames/wand1/002.webp", "frames/wand1/003.webp", "frames/wand1/004.webp", "frames/wand1/005.webp", "frames/wand1/006.webp", "frames/wand1/007.webp", "frames/wand1/008.webp", "frames/wand1/009.webp", "frames/wand1/010.webp", "frames/wand1/011.webp", "frames/wand1/012.webp", "frames/wand1/013.webp", "frames/wand1/014.webp", "frames/wand1/015.webp", "frames/wand1/016.webp", "frames/wand1/017.webp", "frames/wand1/018.webp", "frames/wand1/019.webp", "frames/wand1/020.webp", "frames/wand1/021.webp", "frames/wand1/022.webp", "frames/wand1/023.webp", "frames/wand1/024.webp", "frames/wand1/025.webp", "frames/wand1/026.webp", "frames/wand1/027.webp", "frames/wand1/028.webp", "frames/wand1/029.webp", "frames/wand1/030.webp", "frames/wand1/031.webp", "frames/wand1/032.webp", "frames/wand1/033.webp", "frames/wand1/034.webp", "frames/wand1/035.webp", "frames/wand1/036.webp", "frames/wand1/037.webp", "frames/wand1/038.webp", "frames/wand1/039.webp", "frames/wand1/040.webp", "frames/wand1/041.webp", "frames/wand1/042.webp", "frames/wand1/043.webp", "frames/wand1/044.webp", "frames/wand1/045.webp", "frames/wand1/046.webp", "frames/wand1/047.webp", "frames/wand1/048.webp", "frames/wand1/049.webp", "frames/wand1/050.webp", "frames/wand1/051.webp", "frames/wand1/052.webp", "frames/wand1/053.webp", "frames/wand1/054.webp", "frames/wand1/055.webp", "frames/wand1/056.webp", "frames/wand1/057.webp", "frames/wand1/058.webp", "frames/wand1/059.webp", "frames/wand1/060.webp", "frames/wand1/061.webp", "frames/wand1/062.webp", "frames/wand1/063.webp", "frames/wand1/064.webp", "frames/wand1/065.webp", "frames/wand1/066.webp", "frames/wand1/067.webp", "frames/wand1/068.webp", "frames/wand1/069.webp", "frames/wand1/070.webp", "frames/wand1/071.webp", "frames/wand1/072.webp", "frames/wand1/073.webp", "frames/wand1/074.webp", "frames/wand1/075.webp", "frames/wand1/076.webp", "frames/wand1/077.webp", "frames/wand1/078.webp", "frames/wand1/079.webp", "frames/wand1/080.webp", "frames/wand1/081.webp", "frames/wand1/082.webp", "frames/wand1/083.webp", "frames/wand1/084.webp", "frames/wand1/085.webp", "frames/wand1/086.webp", "frames/wand1/087.webp", "frames/wand1/088.webp", "frames/wand1/089.webp", "frames/wand1/090.webp", "frames/wand1/091.webp", "frames/wand1/092.webp", "frames/wand1/093.webp", "frames/wand1/094.webp", "frames/wand1/095.webp", "frames/wand1/096.webp", "frames/wand2/002.webp", "frames/wand2/003.webp", "frames/wand2/004.webp", "frames/wand2/005.webp", "frames/wand2/006.webp", "frames/wand2/007.webp", "frames/wand2/008.webp", "frames/wand2/009.webp", "frames/wand2/010.webp", "frames/wand2/011.webp", "frames/wand2/012.webp", "frames/wand2/013.webp", "frames/wand2/014.webp", "frames/wand2/015.webp", "frames/wand2/016.webp", "frames/wand2/017.webp", "frames/wand2/018.webp", "frames/wand2/019.webp", "frames/wand2/020.webp", "frames/wand2/021.webp", "frames/wand2/022.webp", "frames/wand2/023.webp", "frames/wand2/024.webp", "frames/wand2/025.webp", "frames/wand2/026.webp", "frames/wand2/027.webp", "frames/wand2/028.webp", "frames/wand2/029.webp", "frames/wand2/030.webp", "frames/wand2/031.webp", "frames/wand2/032.webp", "frames/wand2/033.webp", "frames/wand2/034.webp", "frames/wand2/035.webp", "frames/wand2/036.webp", "frames/wand2/037.webp", "frames/wand2/038.webp", "frames/wand2/039.webp", "frames/wand2/040.webp", "frames/wand2/041.webp", "frames/wand2/042.webp", "frames/wand2/043.webp", "frames/wand2/044.webp", "frames/wand2/045.webp", "frames/wand2/046.webp", "frames/wand2/047.webp", "frames/wand2/048.webp", "frames/wand2/049.webp", "frames/wand2/050.webp", "frames/wand2/051.webp", "frames/wand2/052.webp", "frames/wand2/053.webp", "frames/wand2/054.webp", "frames/wand2/055.webp", "frames/wand2/056.webp", "frames/wand2/057.webp", "frames/wand2/058.webp", "frames/wand2/059.webp", "frames/wand2/060.webp", "frames/wand2/061.webp", "frames/wand2/062.webp", "frames/wand2/063.webp", "frames/wand2/064.webp", "frames/wand2/065.webp", "frames/wand2/066.webp", "frames/wand2/067.webp", "frames/wand2/068.webp", "frames/wand2/069.webp", "frames/wand2/070.webp", "frames/wand2/071.webp", "frames/wand2/072.webp", "frames/wand2/073.webp", "frames/wand2/074.webp", "frames/wand2/075.webp", "frames/wand2/076.webp", "frames/wand2/077.webp", "frames/wand2/078.webp", "frames/wand2/079.webp", "frames/wand2/080.webp", "frames/wand2/081.webp", "frames/wand2/082.webp", "frames/wand2/083.webp", "frames/wand2/084.webp", "frames/wand2/085.webp", "frames/wand2/086.webp", "frames/wand2/087.webp", "frames/wand2/088.webp", "frames/wand2/089.webp", "frames/wand2/090.webp", "frames/wand2/091.webp", "frames/wand2/092.webp", "frames/wand2/093.webp", "frames/wand2/094.webp", "frames/wand2/095.webp", "frames/wand2/096.webp", "frames/wand3/002.webp", "frames/wand3/003.webp", "frames/wand3/004.webp", "frames/wand3/005.webp", "frames/wand3/006.webp", "frames/wand3/007.webp", "frames/wand3/008.webp", "frames/wand3/009.webp", "frames/wand3/010.webp", "frames/wand3/011.webp", "frames/wand3/012.webp", "frames/wand3/013.webp", "frames/wand3/014.webp", "frames/wand3/015.webp", "frames/wand3/016.webp", "frames/wand3/017.webp", "frames/wand3/018.webp", "frames/wand3/019.webp", "frames/wand3/020.webp", "frames/wand3/021.webp", "frames/wand3/022.webp", "frames/wand3/023.webp", "frames/wand3/024.webp", "frames/wand3/025.webp", "frames/wand3/026.webp", "frames/wand3/027.webp", "frames/wand3/028.webp", "frames/wand3/029.webp", "frames/wand3/030.webp", "frames/wand3/031.webp", "frames/wand3/032.webp", "frames/wand3/033.webp", "frames/wand3/034.webp", "frames/wand3/035.webp", "frames/wand3/036.webp", "frames/wand3/037.webp", "frames/wand3/038.webp", "frames/wand3/039.webp", "frames/wand3/040.webp", "frames/wand3/041.webp", "frames/wand3/042.webp", "frames/wand3/043.webp", "frames/wand3/044.webp", "frames/wand3/045.webp", "frames/wand3/046.webp", "frames/wand3/047.webp", "frames/wand3/048.webp", "frames/wand3/049.webp", "frames/wand3/050.webp", "frames/wand3/051.webp", "frames/wand3/052.webp", "frames/wand3/053.webp", "frames/wand3/054.webp", "frames/wand3/055.webp", "frames/wand3/056.webp", "frames/wand3/057.webp", "frames/wand3/058.webp", "frames/wand3/059.webp", "frames/wand3/060.webp", "frames/wand3/061.webp", "frames/wand3/062.webp", "frames/wand3/063.webp", "frames/wand3/064.webp", "frames/wand3/065.webp", "frames/wand3/066.webp", "frames/wand3/067.webp", "frames/wand3/068.webp", "frames/wand3/069.webp", "frames/wand3/070.webp", "frames/wand3/071.webp", "frames/wand3/072.webp", "frames/wand3/073.webp", "frames/wand3/074.webp", "frames/wand3/075.webp", "frames/wand3/076.webp", "frames/wand3/077.webp", "frames/wand3/078.webp", "frames/wand3/079.webp", "frames/wand3/080.webp", "frames/wand3/081.webp", "frames/wand3/082.webp", "frames/wand3/083.webp", "frames/wand3/084.webp", "frames/wand3/085.webp", "frames/wand3/086.webp", "frames/wand3/087.webp", "frames/wand3/088.webp", "frames/wand3/089.webp", "frames/wand3/090.webp", "frames/wand3/091.webp", "frames/wand3/092.webp", "frames/wand3/093.webp", "frames/wand3/094.webp", "frames/wand3/095.webp", "frames/wand3/096.webp"], "waerme": ["frames/waerme/001.webp", "frames/waerme/002.webp", "frames/waerme/003.webp", "frames/waerme/004.webp", "frames/waerme/005.webp", "frames/waerme/006.webp", "frames/waerme/007.webp", "frames/waerme/008.webp", "frames/waerme/009.webp", "frames/waerme/010.webp", "frames/waerme/011.webp", "frames/waerme/012.webp", "frames/waerme/013.webp", "frames/waerme/014.webp", "frames/waerme/015.webp", "frames/waerme/016.webp", "frames/waerme/017.webp", "frames/waerme/018.webp", "frames/waerme/019.webp", "frames/waerme/020.webp", "frames/waerme/021.webp", "frames/waerme/022.webp", "frames/waerme/023.webp", "frames/waerme/024.webp", "frames/waerme/025.webp", "frames/waerme/026.webp", "frames/waerme/027.webp", "frames/waerme/028.webp", "frames/waerme/029.webp", "frames/waerme/030.webp", "frames/waerme/031.webp", "frames/waerme/032.webp", "frames/waerme/033.webp", "frames/waerme/034.webp", "frames/waerme/035.webp", "frames/waerme/036.webp", "frames/waerme/037.webp", "frames/waerme/038.webp", "frames/waerme/039.webp", "frames/waerme/040.webp", "frames/waerme/041.webp", "frames/waerme/042.webp", "frames/waerme/043.webp", "frames/waerme/044.webp", "frames/waerme/045.webp", "frames/waerme/046.webp", "frames/waerme/047.webp", "frames/waerme/048.webp", "frames/waerme/049.webp", "frames/waerme/050.webp", "frames/waerme/051.webp", "frames/waerme/052.webp", "frames/waerme/053.webp", "frames/waerme/054.webp", "frames/waerme/055.webp", "frames/waerme/056.webp", "frames/waerme/057.webp", "frames/waerme/058.webp", "frames/waerme/059.webp", "frames/waerme/060.webp", "frames/waerme/061.webp", "frames/waerme/062.webp", "frames/waerme/063.webp", "frames/waerme/064.webp", "frames/waerme/065.webp", "frames/waerme/066.webp", "frames/waerme/067.webp", "frames/waerme/068.webp", "frames/waerme/069.webp", "frames/waerme/070.webp", "frames/waerme/071.webp", "frames/waerme/072.webp", "frames/waerme/073.webp", "frames/waerme/074.webp", "frames/waerme/075.webp", "frames/waerme/076.webp", "frames/waerme/077.webp", "frames/waerme/078.webp"], "vorher": ["frames/vorher/001.webp", "frames/vorher/002.webp", "frames/vorher/003.webp", "frames/vorher/004.webp", "frames/vorher/005.webp", "frames/vorher/006.webp", "frames/vorher/007.webp", "frames/vorher/008.webp", "frames/vorher/009.webp", "frames/vorher/010.webp", "frames/vorher/011.webp", "frames/vorher/012.webp", "frames/vorher/013.webp", "frames/vorher/014.webp", "frames/vorher/015.webp", "frames/vorher/016.webp", "frames/vorher/017.webp", "frames/vorher/018.webp", "frames/vorher/019.webp", "frames/vorher/020.webp", "frames/vorher/021.webp", "frames/vorher/022.webp", "frames/vorher/023.webp", "frames/vorher/024.webp", "frames/vorher/025.webp", "frames/vorher/026.webp", "frames/vorher/027.webp", "frames/vorher/028.webp", "frames/vorher/029.webp", "frames/vorher/030.webp", "frames/vorher/031.webp", "frames/vorher/032.webp", "frames/vorher/033.webp", "frames/vorher/034.webp", "frames/vorher/035.webp", "frames/vorher/036.webp", "frames/vorher/037.webp", "frames/vorher/038.webp", "frames/vorher/039.webp", "frames/vorher/040.webp", "frames/vorher/041.webp", "frames/vorher/042.webp", "frames/vorher/043.webp", "frames/vorher/044.webp", "frames/vorher/045.webp", "frames/vorher/046.webp", "frames/vorher/047.webp", "frames/vorher/048.webp", "frames/vorher/049.webp", "frames/vorher/050.webp", "frames/vorher/051.webp", "frames/vorher/052.webp", "frames/vorher/053.webp", "frames/vorher/054.webp", "frames/vorher/055.webp", "frames/vorher/056.webp", "frames/vorher/057.webp", "frames/vorher/058.webp", "frames/vorher/059.webp", "frames/vorher/060.webp", "frames/vorher/061.webp", "frames/vorher/062.webp", "frames/vorher/063.webp", "frames/vorher/064.webp", "frames/vorher/065.webp", "frames/vorher/066.webp", "frames/vorher/067.webp", "frames/vorher/068.webp", "frames/vorher/069.webp", "frames/vorher/070.webp", "frames/vorher/071.webp", "frames/vorher/072.webp", "frames/vorher/073.webp", "frames/vorher/074.webp", "frames/vorher/075.webp", "frames/vorher/076.webp", "frames/vorher/077.webp", "frames/vorher/078.webp", "frames/vorher/079.webp", "frames/vorher/080.webp", "frames/vorher/081.webp", "frames/vorher/082.webp", "frames/vorher/083.webp", "frames/vorher/084.webp", "frames/vorher/085.webp", "frames/vorher/086.webp", "frames/vorher/087.webp", "frames/vorher/088.webp", "frames/vorher/089.webp", "frames/vorher/090.webp", "frames/vorher/091.webp", "frames/vorher/092.webp", "frames/vorher/093.webp", "frames/vorher/094.webp", "frames/vorher/095.webp", "frames/vorher/096.webp"], "risse": ["frames/risse/001.webp", "frames/risse/002.webp", "frames/risse/003.webp", "frames/risse/004.webp", "frames/risse/005.webp", "frames/risse/006.webp", "frames/risse/007.webp", "frames/risse/008.webp", "frames/risse/009.webp", "frames/risse/010.webp", "frames/risse/011.webp", "frames/risse/012.webp", "frames/risse/013.webp", "frames/risse/014.webp", "frames/risse/015.webp", "frames/risse/016.webp", "frames/risse/017.webp", "frames/risse/018.webp", "frames/risse/019.webp", "frames/risse/020.webp", "frames/risse/021.webp", "frames/risse/022.webp", "frames/risse/023.webp", "frames/risse/024.webp", "frames/risse/025.webp", "frames/risse/026.webp", "frames/risse/027.webp", "frames/risse/028.webp", "frames/risse/029.webp", "frames/risse/030.webp", "frames/risse/031.webp", "frames/risse/032.webp", "frames/risse/033.webp", "frames/risse/034.webp", "frames/risse/035.webp", "frames/risse/036.webp", "frames/risse/037.webp", "frames/risse/038.webp", "frames/risse/039.webp", "frames/risse/040.webp", "frames/risse/041.webp", "frames/risse/042.webp", "frames/risse/043.webp", "frames/risse/044.webp", "frames/risse/045.webp", "frames/risse/046.webp", "frames/risse/047.webp", "frames/risse/048.webp", "frames/risse/049.webp", "frames/risse/050.webp", "frames/risse/051.webp", "frames/risse/052.webp", "frames/risse/053.webp", "frames/risse/054.webp", "frames/risse/055.webp", "frames/risse/056.webp", "frames/risse/057.webp", "frames/risse/058.webp", "frames/risse/059.webp", "frames/risse/060.webp", "frames/risse/061.webp", "frames/risse/062.webp", "frames/risse/063.webp", "frames/risse/064.webp", "frames/risse/065.webp", "frames/risse/066.webp", "frames/risse/067.webp", "frames/risse/068.webp", "frames/risse/069.webp", "frames/risse/070.webp", "frames/risse/071.webp", "frames/risse/072.webp", "frames/risse/073.webp", "frames/risse/074.webp"]};
+const COLORS={"beige": "videos/beige.mp4", "grau": "videos/grau.mp4", "gruen": "videos/gruen.mp4", "terrakotta": "videos/terrakotta.mp4", "white": "videos/white.webp"};
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Bildsequenzen ---------- */
+  const scenes = [...document.querySelectorAll('.scene')].map(sec => {
+    const key = sec.dataset.seq;
+    sec.style.height = (parseFloat(sec.dataset.len) * 100) + 'vh';
+    return {sec, key, urls: SEQ[key], imgs: null, canvas: sec.querySelector('canvas'),
+            last: -1, steps: sec.querySelector('.layers'), mstep: sec.querySelector('.mstep'),
+            mark: sec.querySelector('.scale-mark i'), step: -1,
+            mn: sec.querySelector('.mobile-narrative')};
+  });
+
+  function load(s){
+    if (s.imgs) return;
+    s.imgs = s.urls.map((u, i) => {
+      const im = new Image(); im.decoding = 'async';
+      im.onload = () => { if (i === 0 || i === s.last) { s.last = -1; tick();
+
+  /* ==========================================================================
+     CINEMATIC SCROLL HERO CONTROLLER (240 Optimized Frames)
+     ========================================================================== */
+  const HERO_FRAMES_COUNT = 240;
+  const heroFrames = new Array(HERO_FRAMES_COUNT);
+  const heroCanvas = document.getElementById('heroCanvas');
+  const heroScene = document.getElementById('heroScene');
+  const heroOverlay = document.getElementById('heroOverlay');
+  const heroScrollCue = document.getElementById('heroScrollCue');
+  const globalHead = document.getElementById('globalHead');
+  const heroMenuToggle = document.getElementById('heroMenuToggle');
+  const heroMobileDrawer = document.getElementById('heroMobileDrawer');
+  const heroCtx = heroCanvas ? heroCanvas.getContext('2d') : null;
+
+  let currentTargetIndex = 0;
+  let lastDrawnIndex = -1;
+
+  function loadHeroFrame(index) {
+    if (index < 0 || index >= HERO_FRAMES_COUNT) return null;
+    if (heroFrames[index]) return heroFrames[index];
+    const img = new Image();
+    img.decoding = 'async';
+    const numStr = String(index + 1).padStart(3, '0');
+    img.src = `frames/hero/${numStr}.webp`;
+    img.onload = () => {
+      if (index === currentTargetIndex || (lastDrawnIndex === -1 && index === 0)) {
+        renderHeroFrame(currentTargetIndex);
+      }
+    };
+    heroFrames[index] = img;
+    return img;
+  }
+
+  // Wave 1: Immediate load of frame 0 (start) and 239 (end)
+  loadHeroFrame(0);
+  loadHeroFrame(HERO_FRAMES_COUNT - 1);
+
+  // Wave 2: Staged keyframe distribution
+  for (let k = 0; k < HERO_FRAMES_COUNT; k += 10) {
+    loadHeroFrame(k);
+  }
+
+  // Wave 3: Idle background loading
+  let idleIdx = 1;
+  function preloadIdleBatch() {
+    const batchSize = 6;
+    let loadedCount = 0;
+    while (idleIdx < HERO_FRAMES_COUNT && loadedCount < batchSize) {
+      if (!heroFrames[idleIdx]) {
+        loadHeroFrame(idleIdx);
+        loadedCount++;
+      }
+      idleIdx++;
+    }
+    if (idleIdx < HERO_FRAMES_COUNT) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(preloadIdleBatch);
+      } else {
+        setTimeout(preloadIdleBatch, 25);
+      }
+    }
+  }
+  setTimeout(preloadIdleBatch, 80);
+
+  function resizeHeroCanvas() {
+    if (!heroCanvas) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const r = heroCanvas.getBoundingClientRect();
+    const w = Math.round(r.width * dpr);
+    const h = Math.round(r.height * dpr);
+    if (heroCanvas.width !== w || heroCanvas.height !== h) {
+      heroCanvas.width = w;
+      heroCanvas.height = h;
+      lastDrawnIndex = -1;
+      renderHeroFrame(currentTargetIndex);
+    }
+  }
+
+  function renderHeroFrame(targetIdx) {
+    if (!heroCtx || !heroCanvas || heroCanvas.width === 0 || heroCanvas.height === 0) return;
+
+    let img = heroFrames[targetIdx];
+    if (!img || !img.complete || !img.naturalWidth) {
+      // Find nearest loaded frame backward then forward
+      let found = -1;
+      for (let j = targetIdx; j >= 0; j--) {
+        if (heroFrames[j] && heroFrames[j].complete && heroFrames[j].naturalWidth) {
+          found = j;
+          break;
+        }
+      }
+      if (found === -1) {
+        for (let j = targetIdx; j < HERO_FRAMES_COUNT; j++) {
+          if (heroFrames[j] && heroFrames[j].complete && heroFrames[j].naturalWidth) {
+            found = j;
+            break;
+          }
+        }
+      }
+      if (found !== -1) {
+        img = heroFrames[found];
+      } else {
+        return;
+      }
+    }
+
+    const cw = heroCanvas.width;
+    const ch = heroCanvas.height;
+    const iw = img.naturalWidth || 848;
+    const ih = img.naturalHeight || 464;
+    const scale = Math.max(cw / iw, ch / ih);
+    const dw = iw * scale;
+    const dh = ih * scale;
+
+    // Aspect ratio cover with center-right bias for wide viewports
+    const isWide = (cw / ch) > 1.35;
+    const alignX = isWide ? 0.52 : 0.5;
+    const alignY = 0.5;
+    const dx = (cw - dw) * alignX;
+    const dy = (ch - dh) * alignY;
+
+    heroCtx.drawImage(img, dx, dy, dw, dh);
+    lastDrawnIndex = targetIdx;
+  }
+
+  function updateHeroScroll() {
+    if (!heroScene) return;
+    const r = heroScene.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const scrollTrack = r.height - vh;
+    if (scrollTrack <= 0) return;
+
+    // Normalized progress 0 to 1
+    const p = Math.min(1, Math.max(0, -r.top / scrollTrack));
+
+    // Target frame mapping
+    const frameIdx = Math.min(HERO_FRAMES_COUNT - 1, Math.floor(p * HERO_FRAMES_COUNT));
+    currentTargetIndex = frameIdx;
+
+    // Dynamic lookahead preloading
+    for (let k = Math.max(0, frameIdx - 3); k <= Math.min(HERO_FRAMES_COUNT - 1, frameIdx + 12); k++) {
+      loadHeroFrame(k);
+    }
+
+    renderHeroFrame(frameIdx);
+
+    // Final Hero Overlay transition
+    if (heroOverlay) {
+      if (reduce) {
+        heroOverlay.style.opacity = '1';
+        heroOverlay.style.transform = 'none';
+        heroOverlay.style.pointerEvents = 'auto';
+      } else if (p < 0.70) {
+        heroOverlay.style.opacity = '0';
+        heroOverlay.style.transform = 'translateY(22px)';
+        heroOverlay.style.pointerEvents = 'none';
+      } else {
+        const t = Math.min(1, Math.max(0, (p - 0.70) / 0.24));
+        heroOverlay.style.opacity = t.toFixed(3);
+        heroOverlay.style.transform = `translateY(${((1 - t) * 18).toFixed(1)}px)`;
+        heroOverlay.style.pointerEvents = t > 0.6 ? 'auto' : 'none';
+      }
+    }
+
+    // Scroll Cue visibility
+    if (heroScrollCue) {
+      if (reduce) {
+        heroScrollCue.style.display = 'none';
+      } else if (p < 0.04) {
+        const cueAlpha = 1 - (p / 0.04);
+        heroScrollCue.style.opacity = cueAlpha.toFixed(2);
+        heroScrollCue.style.pointerEvents = cueAlpha > 0.5 ? 'auto' : 'none';
+      } else {
+        heroScrollCue.style.opacity = '0';
+        heroScrollCue.style.pointerEvents = 'none';
+      }
+    }
+
+    // Global Head visibility when passing the hero scene
+    if (globalHead) {
+      if (r.bottom <= 0) {
+        globalHead.classList.add('visible');
+      } else {
+        globalHead.classList.remove('visible');
+      }
+    }
+  }
+
+  // Mobile menu drawer
+  if (heroMenuToggle && heroMobileDrawer) {
+    heroMenuToggle.addEventListener('click', () => {
+      const isOpen = heroMobileDrawer.classList.toggle('open');
+      heroMenuToggle.classList.toggle('open', isOpen);
+      heroMenuToggle.setAttribute('aria-expanded', String(isOpen));
+      heroMobileDrawer.setAttribute('aria-hidden', String(!isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    heroMobileDrawer.querySelectorAll('.drawer-link, .drawer-btn').forEach(l => {
+      l.addEventListener('click', () => {
+        heroMobileDrawer.classList.remove('open');
+        heroMenuToggle.classList.remove('open');
+        heroMenuToggle.setAttribute('aria-expanded', 'false');
+        heroMobileDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && heroMobileDrawer.classList.contains('open')) {
+        heroMobileDrawer.classList.remove('open');
+        heroMenuToggle.classList.remove('open');
+        heroMenuToggle.setAttribute('aria-expanded', 'false');
+        heroMobileDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  resizeHeroCanvas();
+  updateHeroScroll();
+  window.addEventListener('resize', () => {
+    resizeHeroCanvas();
+    updateHeroScroll();
+  }, { passive: true });
+ } };
+      im.src = u; return im;
+    });
+  }
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) load(scenes.find(s => s.sec === e.target));
+  }), {rootMargin: '150% 0px'});
+  scenes.forEach(s => io.observe(s.sec));
+  load(scenes[0]);
+
+  function size(c){
+    const r = c.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+    const w = Math.round(r.width * d), h = Math.round(r.height * d);
+    if (c.width !== w || c.height !== h){ c.width = w; c.height = h; return true; }
+    return false;
+  }
+  function cover(ctx, im, w, h, alignY = 0.5){
+    const s = Math.max(w / im.naturalWidth, h / im.naturalHeight);
+    const dw = im.naturalWidth * s, dh = im.naturalHeight * s;
+    ctx.drawImage(im, (w - dw) / 2, (h - dh) * alignY, dw, dh);
+  }
+
+  function updateMobile(s, p) {
+    const mn = s.mn;
+    if (!mn) return;
+
+    if (s.key === 'wand') {
+      const intro = mn.querySelector('.mn-intro');
+      if (intro) {
+        if (p < 0.12) {
+          const ratio = Math.max(0, 1 - p / 0.12);
+          intro.style.opacity = ratio;
+          intro.style.transform = 'translateY(' + (-p * 50) + 'px)';
+          intro.style.pointerEvents = ratio > 0.4 ? 'auto' : 'none';
+        } else {
+          intro.style.opacity = '0';
+          intro.style.pointerEvents = 'none';
+        }
+      }
+
+      // Hide top step pill on intro view (p < 0.08) so it doesn't clutter the hero
+      const topBar = mn.querySelector('.mn-top');
+      if (topBar) {
+        topBar.style.opacity = p < 0.08 ? '0' : '1';
+        topBar.style.pointerEvents = p < 0.08 ? 'none' : 'auto';
+      }
+
+      let phase = 0;
+      if (p >= 0.94) phase = 4;
+      else if (p >= 0.84) phase = 3;
+      else if (p >= 0.65) phase = 2;
+      else if (p >= 0.36) phase = 1;
+      else phase = 0;
+
+      const bottom = mn.querySelector('.mn-bottom');
+      if (bottom) {
+        bottom.style.opacity = p < 0.05 ? Math.max(0, p / 0.05) : '1';
+      }
+
+      const items = mn.querySelectorAll('.mn-phase-item');
+      items.forEach((item, idx) => item.classList.toggle('on', idx === phase));
+
+      const segs = mn.querySelectorAll('.mn-seg');
+      const tag = mn.querySelector('.mn-step-tag');
+      segs.forEach((seg, idx) => {
+        seg.classList.toggle('on', phase === 4 || idx === Math.min(phase, 3));
+      });
+      if (tag) {
+        if (phase === 4) tag.textContent = 'WDVS · Fertig';
+        else tag.textContent = 'WDVS · Schritt ' + (phase + 1) + ' von 4';
+      }
+    } else if (s.key === 'waerme') {
+      const isWarm = p >= 0.50;
+      const items = mn.querySelectorAll('.mn-phase-item');
+      items.forEach((item, idx) => item.classList.toggle('on', isWarm ? idx === 1 : idx === 0));
+      const badge = mn.querySelector('.mn-status-tag');
+      if (badge) {
+        badge.textContent = isWarm ? 'Gedämmt' : 'Ungedämmt';
+        badge.className = 'mn-status-tag ' + (isWarm ? 'mn-badge-insulated' : 'mn-badge-uninsulated');
+      }
+    } else if (s.key === 'vorher') {
+      const isAfter = p >= 0.50;
+      const items = mn.querySelectorAll('.mn-phase-item');
+      items.forEach((item, idx) => item.classList.toggle('on', isAfter ? idx === 1 : idx === 0));
+      const badge = mn.querySelector('.mn-status-tag');
+      if (badge) {
+        badge.textContent = isAfter ? 'Nachher' : 'Vorher';
+        badge.className = 'mn-status-tag ' + (isAfter ? 'mn-badge-after' : 'mn-badge-before');
+      }
+    } else if (s.key === 'risse') {
+      const isFixed = p >= 0.50;
+      const items = mn.querySelectorAll('.mn-phase-item');
+      items.forEach((item, idx) => item.classList.toggle('on', isFixed ? idx === 1 : idx === 0));
+      const badge = mn.querySelector('.mn-status-tag');
+      if (badge) {
+        badge.textContent = isFixed ? 'Geschlossen' : 'Schadensbild';
+        badge.className = 'mn-status-tag ' + (isFixed ? 'mn-badge-after' : 'mn-badge-before');
+      }
+    }
+  }
+
+  function render(s){
+    const r = s.sec.getBoundingClientRect();
+    const vh = innerHeight, span = Math.max(1, r.height - vh);
+    if (r.bottom < -vh || r.top > vh * 2) return;
+    const p = Math.min(1, Math.max(0, -r.top / span));
+    if (!s.imgs) load(s);
+    const n = s.imgs.length;
+    let i = Math.round(p * (n - 1));
+    const resized = size(s.canvas);
+    if (i !== s.last || resized){
+      let j = i; while (j > 0 && !(s.imgs[j].complete && s.imgs[j].naturalWidth)) j--;
+      const im = s.imgs[j];
+      if (im.complete && im.naturalWidth){
+        const ctx = s.canvas.getContext('2d');
+        cover(ctx, im, s.canvas.width, s.canvas.height);
+        s.last = (j === i) ? i : -1;
+      }
+    }
+    if (s.steps){
+      const th = s.steps.dataset.steps.split(',').map(Number);
+      let k = 0; th.forEach((t, x) => { if (p >= t) k = x; });
+      if (k !== s.step){
+        s.step = k;
+        [...s.steps.children].forEach((li, x) => li.classList.toggle('on', x === k));
+        const li = s.steps.children[k];
+        s.mstep.innerHTML = '<b>' + (k + 1) + ' von 4: ' + li.querySelector('b').textContent + '</b>' + li.querySelector('span').textContent;
+      }
+    }
+    s.sec.querySelectorAll('.scale-mark i').forEach(m => {
+      m.style.left = (100 - p * 100) + '%';
+    });
+
+    if (s.mn) updateMobile(s, p);
+  }
+
+  let queued = false;
+  function tick(){ if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; scenes.forEach(render); updateHeroScroll(); }); }
+  addEventListener('scroll', tick, {passive: true});
+  addEventListener('resize', () => { scenes.forEach(s => s.last = -1); tick(); });
+  tick();
+
+  /* ---------- Farbwähler ---------- */
+  const vid = document.getElementById('colorVideo');
+  const poster = document.getElementById('colorPoster');
+  const fade = document.getElementById('colorFade');
+  const chips = [...document.querySelectorAll('.chip')];
+  poster.src = COLORS.white;
+  let current = 'white';
+
+  function snapshot(){
+    size(fade);
+    const ctx = fade.getContext('2d');
+    if (vid.style.opacity === '1' && vid.readyState >= 2){
+      const s = Math.max(fade.width / vid.videoWidth, fade.height / vid.videoHeight);
+      const dw = vid.videoWidth * s, dh = vid.videoHeight * s;
+      ctx.drawImage(vid, (fade.width - dw) / 2, (fade.height - dh) / 2, dw, dh);
+    } else cover(ctx, poster, fade.width, fade.height);
+    fade.style.transition = 'none'; fade.style.opacity = '1';
+    fade.getBoundingClientRect();
+    fade.style.transition = '';
+  }
+
+  function choose(c){
+    if (c === current) return;
+    chips.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.color === c)));
+    snapshot();
+    current = c;
+    if (c === 'white'){
+      vid.pause(); vid.style.opacity = '0';
+      requestAnimationFrame(() => fade.style.opacity = '0');
+      return;
+    }
+    vid.style.opacity = '0';
+    vid.src = COLORS[c];
+    vid.playbackRate = 1;
+    const go = () => {
+      vid.removeEventListener('loadeddata', go);
+      vid.style.opacity = '1';
+      if (reduce){ vid.currentTime = Math.max(0, vid.duration - 0.05); }
+      else { vid.playbackRate = 2; vid.play().catch(() => { vid.currentTime = Math.max(0, vid.duration - 0.05); }); }
+      fade.style.opacity = '0';
+    };
+    vid.addEventListener('loadeddata', go);
+    vid.load();
+  }
+  chips.forEach(b => b.addEventListener('click', () => choose(b.dataset.color)));
+})();
+</script>
+</body>
+</html>
