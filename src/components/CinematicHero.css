@@ -218,6 +218,12 @@
 /* Intermediate Step Cards: Punchy, Clean, No Eyebrow Clutter */
 .story-beat-card {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(1.25rem, 4.5vw, 3.5rem);
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
   max-width: 32rem;
   display: flex;
   flex-direction: column;
@@ -262,6 +268,12 @@
 /* Final Hero Card: Mockup Match */
 .story-final-card {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(1.25rem, 4.5vw, 3.5rem);
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
   max-width: 36rem;
   display: flex;
   flex-direction: column;
@@ -479,20 +491,60 @@
   }
 
   .hero-story-container {
-    align-items: flex-end;
-    padding-bottom: clamp(2rem, 5vh, 3.2rem);
+    align-items: center;
+    padding: 0 clamp(1.2rem, 5vw, 2.5rem);
   }
 
   .story-beat-card,
   .story-final-card {
-    max-width: 100%;
-    background: rgba(243, 244, 245, 0.92);
-    -webkit-backdrop-filter: blur(18px);
-    backdrop-filter: blur(18px);
-    padding: 1.4rem 1.3rem;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.1);
+    left: clamp(1.2rem, 5vw, 2.5rem);
+    right: auto;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: min(30rem, calc(100% - clamp(2.4rem, 10vw, 5rem)));
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .final-eyebrow {
+    font-size: clamp(0.76rem, 2.7vw, 0.86rem);
+  }
+
+  .final-title {
+    font-size: clamp(2.2rem, 8.5vw, 3.2rem);
+    line-height: 1.05;
+  }
+
+  .final-lead {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
+    line-height: 1.45;
+    max-width: 24rem;
+  }
+
+  .hero-btn-main {
+    padding: 0.8rem 1.65rem;
+    font-size: 1.02rem;
+  }
+
+  .beat-title {
+    font-size: clamp(2rem, 7.5vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  .beat-desc {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
+    line-height: 1.45;
+    max-width: 23rem;
   }
 
   .hero-progress-pill {
